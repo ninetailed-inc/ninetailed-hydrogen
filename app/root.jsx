@@ -15,6 +15,12 @@ import resetStyles from './styles/reset.css?url';
 import appStyles from './styles/app.css?url';
 import {Layout} from '~/components/Layout';
 
+// Importing a module that exports using CommonJS syntax anywhere in the import chain throws reference error on `npm run dev`
+import {NinetailedProvider} from '@ninetailed/experience.js-react';
+
+// Example with a non-Ninetailed package
+// import {getAlpha2Codes} from 'i18n-iso-countries';
+
 /**
  * This is important to avoid re-fetching root queries on sub-navigations
  * @type {ShouldRevalidateFunction}
